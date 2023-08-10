@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "barrier-free-app",
+    "slug": "barrier-free-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "barrier-free-app"
+}
