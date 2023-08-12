@@ -1,4 +1,4 @@
-const ClassInfo = {
+const classInfo = {
   "중앙학술정보관 1F 제2열람실":
     "강의실 문턱 (1F 제1열람실과 경사로로 연결), 점자 표지판 미설치",
   61408: "강의실 문턱",
@@ -152,4 +152,4 @@ const ClassInfo = {
   "50217B": "점자 표지판 미설치",
 };
 
-export default ClassInfo;
+export default classInfo;

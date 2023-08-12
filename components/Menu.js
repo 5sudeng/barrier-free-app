@@ -1,10 +1,20 @@
-import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  Text,
+  View,
+  TouchableOpacity,
+  StyleSheet,
+  Linking,
+} from "react-native";
 import { Ionicons, AntDesign, MaterialIcons } from "@expo/vector-icons";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
 
 function Menu() {
+  const phoneNumber = "tel:027601092";
+  const makeCall = () => {
+    Linking.openURL(phoneNumber);
+  };
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -41,7 +51,7 @@ function Menu() {
           <Text style={styles.menuIcon}>
             <MaterialIcons name="restaurant" size={50} color="#3d5f46" />
           </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("RestaurantMR")}>
             <Text style={{ ...styles.menuText, paddingHorizontal: 70 }}>
               음식점 검색 (명륜)
             </Text>
@@ -51,7 +61,7 @@ function Menu() {
           <Text style={styles.menuIcon}>
             <MaterialIcons name="restaurant" size={50} color="#3d5f46" />
           </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("RestaurantYJ")}>
             <Text style={{ ...styles.menuText, paddingHorizontal: 70 }}>
               음식점 검색 (율전)
             </Text>
@@ -61,7 +71,7 @@ function Menu() {
           <Text style={styles.menuIcon}>
             <Ionicons name="call-outline" size={50} color="#3d5f46" />
           </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={makeCall}>
             <Text style={{ ...styles.menuText, paddingHorizontal: 25 }}>
               장애학생지원센터로 연락하기
             </Text>

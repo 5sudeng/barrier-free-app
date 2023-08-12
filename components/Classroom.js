@@ -10,7 +10,7 @@ import {
   TextInput,
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import ClassInfo from "./ClassInfo";
+import classInfo from "./classInfo";
 
 function Classroom() {
   const [whichRoom, setWhichRoom] = useState("");
@@ -63,13 +63,13 @@ function Classroom() {
           }}
         ></View>
         <ScrollView>
-          {Object.keys(ClassInfo).map((key) => {
+          {Object.keys(classInfo).map((key) => {
             if (key.includes(whichRoom))
               return (
                 <View key={key}>
                   <View style={styles.classrooms}>
                     <Text style={styles.eachTxt}>{key}</Text>
-                    <Text style={styles.eachEx}>{ClassInfo[key]}</Text>
+                    <Text style={styles.eachEx}>{classInfo[key]}</Text>
                   </View>
                   <View style={styles.hr}></View>
                 </View>
