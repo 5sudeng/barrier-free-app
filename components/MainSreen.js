@@ -17,30 +17,41 @@ function MainScreen() {
   const onPressMenu = () => {
     navigation.navigate("Menu");
   };
-  const onPressBld = () => {};
+  const onPressBld = (buildingName) => () => {
+    navigation.navigate("BldDetail", { buildingName });
+  };
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.menuBar}>
-        <TouchableOpacity onPress={onPressMenu}>
-          <Text style={{ paddingTop: 47, paddingLeft: 5 }}>
-            <Ionicons
-              name="md-reorder-three-outline"
-              size={50}
-              color="#3d5f46"
-            />
+        <View style={{ flex: 1.55 }}>
+          <TouchableOpacity onPress={onPressMenu}>
+            <Text
+              style={{
+                paddingTop: 47,
+                paddingLeft: 5,
+              }}
+            >
+              <Ionicons
+                name="md-reorder-three-outline"
+                size={50}
+                color="#3d5f46"
+              />
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{ flex: 13, alignItems: "center" }}>
+          <Text
+            style={{
+              color: "#3d5f46",
+              fontSize: 25,
+              paddingTop: 45,
+              marginLeft: "-7%",
+            }}
+          >
+            성균관대학교 배리어프리맵
           </Text>
-        </TouchableOpacity>
-        <Text
-          style={{
-            color: "#3d5f46",
-            fontSize: 25,
-            paddingTop: 45,
-            paddingHorizontal: 40,
-          }}
-        >
-          성균관대학교 배리어프리맵
-        </Text>
+        </View>
       </View>
       <View style={{ ...styles.main }}>
         <Image
@@ -51,7 +62,7 @@ function MainScreen() {
           }}
         />
       </View>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("퇴계인문관")}>
         <Text
           style={{
             ...styles.bldList,
@@ -62,7 +73,7 @@ function MainScreen() {
           퇴계인문관
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("다산경제관")}>
         <Text
           style={{
             ...styles.bldList,
@@ -73,7 +84,7 @@ function MainScreen() {
           다산경제관
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("호암관")}>
         <Text
           style={{
             ...styles.bldList,
@@ -84,7 +95,7 @@ function MainScreen() {
           호암관
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("경영관")}>
         <Text
           style={{
             ...styles.bldList,
@@ -95,7 +106,7 @@ function MainScreen() {
           경영관
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("법학관")}>
         <Text
           style={{
             ...styles.bldList,
@@ -106,7 +117,7 @@ function MainScreen() {
           법학관
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("수선관")}>
         <Text
           style={{
             ...styles.bldList,
@@ -117,7 +128,7 @@ function MainScreen() {
           수선관
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("중앙학술정보관")}>
         <Text
           style={{
             ...styles.bldList,
@@ -128,7 +139,7 @@ function MainScreen() {
           중앙학술정보관
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("학생회관")}>
         <Text
           style={{
             ...styles.bldList,
@@ -139,7 +150,7 @@ function MainScreen() {
           학생회관
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressBld}>
+      <TouchableOpacity onPress={onPressBld("국제관")}>
         <Text
           style={{
             ...styles.bldList,

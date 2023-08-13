@@ -12,21 +12,25 @@ function RestaurantYJ() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.menuBar}>
-        <TouchableOpacity onPress={() => navigation.navigate("Menu")}>
-          <Text style={{ paddingTop: 47, paddingLeft: 10 }}>
-            <AntDesign name="caretleft" size={30} color="#3d5f46" />
+        <View style={{ flex: 1 }}>
+          <TouchableOpacity onPress={() => navigation.navigate("Menu")}>
+            <Text style={{ paddingTop: 47, paddingLeft: 10 }}>
+              <AntDesign name="caretleft" size={30} color="#3d5f46" />
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{ flex: 12, alignItems: "center" }}>
+          <Text
+            style={{
+              color: "#3d5f46",
+              fontSize: 25,
+              paddingTop: 45,
+              marginLeft: "-5%",
+            }}
+          >
+            율전 음식점
           </Text>
-        </TouchableOpacity>
-        <Text
-          style={{
-            color: "#3d5f46",
-            fontSize: 25,
-            paddingTop: 45,
-            paddingHorizontal: 110,
-          }}
-        >
-          율전 음식점
-        </Text>
+        </View>
       </View>
       <View style={styles.main}>
         <View style={{ flex: 1 }}>

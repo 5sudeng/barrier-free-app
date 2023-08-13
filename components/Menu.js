@@ -20,62 +20,86 @@ function Menu() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.menuBar}>
-        <TouchableOpacity onPress={() => navigation.navigate("MainScreen")}>
-          <Text style={{ paddingTop: 47, paddingLeft: 10 }}>
-            <AntDesign name="caretleft" size={30} color="#3d5f46" />
+        <View style={{ flex: 1 }}>
+          <TouchableOpacity onPress={() => navigation.navigate("MainScreen")}>
+            <Text style={{ paddingTop: 47, paddingLeft: 10 }}>
+              <AntDesign name="caretleft" size={30} color="#3d5f46" />
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{ flex: 12, alignItems: "center" }}>
+          <Text
+            style={{
+              color: "#3d5f46",
+              fontSize: 25,
+              paddingTop: 45,
+              marginLeft: "-5%",
+            }}
+          >
+            메뉴
           </Text>
-        </TouchableOpacity>
-        <Text
-          style={{
-            color: "#3d5f46",
-            fontSize: 25,
-            paddingTop: 45,
-            paddingHorizontal: 135,
-          }}
-        >
-          메뉴
-        </Text>
+        </View>
       </View>
       <View style={styles.main}>
         <View style={styles.menus}>
-          <Text style={styles.menuIcon}>
-            <AntDesign name="search1" size={50} color="#3d5f46" />
-          </Text>
-          <TouchableOpacity onPress={() => navigation.navigate("Classroom")}>
-            <Text style={{ ...styles.menuText, paddingHorizontal: 95 }}>
-              강의실 검색
+          <View style={{ flex: 1 }}>
+            <Text style={styles.menuIcon}>
+              <AntDesign name="search1" size={50} color="#3d5f46" />
             </Text>
-          </TouchableOpacity>
+          </View>
+          <View style={{ flex: 5, alignItems: "center" }}>
+            <TouchableOpacity onPress={() => navigation.navigate("Classroom")}>
+              <Text style={{ ...styles.menuText, marginLeft: "-6%" }}>
+                강의실 검색
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
         <View style={styles.menus}>
-          <Text style={styles.menuIcon}>
-            <MaterialIcons name="restaurant" size={50} color="#3d5f46" />
-          </Text>
-          <TouchableOpacity onPress={() => navigation.navigate("RestaurantMR")}>
-            <Text style={{ ...styles.menuText, paddingHorizontal: 70 }}>
-              음식점 검색 (명륜)
+          <View style={{ flex: 1 }}>
+            <Text style={styles.menuIcon}>
+              <MaterialIcons name="restaurant" size={50} color="#3d5f46" />
             </Text>
-          </TouchableOpacity>
+          </View>
+          <View style={{ flex: 5, alignItems: "center" }}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("RestaurantMR")}
+            >
+              <Text style={{ ...styles.menuText, marginLeft: "-3%" }}>
+                음식점 검색 (명륜)
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
         <View style={styles.menus}>
-          <Text style={styles.menuIcon}>
-            <MaterialIcons name="restaurant" size={50} color="#3d5f46" />
-          </Text>
-          <TouchableOpacity onPress={() => navigation.navigate("RestaurantYJ")}>
-            <Text style={{ ...styles.menuText, paddingHorizontal: 70 }}>
-              음식점 검색 (율전)
+          <View style={{ flex: 1 }}>
+            <Text style={styles.menuIcon}>
+              <MaterialIcons name="restaurant" size={50} color="#3d5f46" />
             </Text>
-          </TouchableOpacity>
+          </View>
+          <View style={{ flex: 5, alignItems: "center" }}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("RestaurantYJ")}
+            >
+              <Text style={{ ...styles.menuText, marginLeft: "-3%" }}>
+                음식점 검색 (율전)
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
         <View style={styles.menus}>
-          <Text style={styles.menuIcon}>
-            <Ionicons name="call-outline" size={50} color="#3d5f46" />
-          </Text>
-          <TouchableOpacity onPress={makeCall}>
-            <Text style={{ ...styles.menuText, paddingHorizontal: 25 }}>
-              장애학생지원센터로 연락하기
+          <View style={{ flex: 1 }}>
+            <Text style={styles.menuIcon}>
+              <Ionicons name="call-outline" size={50} color="#3d5f46" />
             </Text>
-          </TouchableOpacity>
+          </View>
+          <View style={{ flex: 6, alignItems: "center" }}>
+            <TouchableOpacity onPress={makeCall}>
+              <Text style={{ ...styles.menuText, marginLeft: "0%" }}>
+                장애학생지원센터로 연락하기
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
