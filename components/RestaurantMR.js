@@ -43,6 +43,7 @@ function RestaurantMR() {
             {Object.keys(mrInfo).map((key) => {
               return (
                 <Marker
+                  pinColor="#3d5f46"
                   key={key}
                   coordinate={{
                     latitude: mrInfo[key].point[1],

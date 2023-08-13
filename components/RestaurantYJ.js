@@ -44,6 +44,7 @@ function RestaurantYJ() {
               return (
                 <Marker
                   key={key}
+                  pinColor="#3d5f46"
                   coordinate={{
                     latitude: yjInfo[key].point[1],
                     longitude: yjInfo[key].point[0],
